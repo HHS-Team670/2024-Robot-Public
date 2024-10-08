@@ -22,7 +22,6 @@ public class AutonStartIntake extends Command implements MustangCommand{
         this.intake = intake;
         this.indexer = indexer;
         this.shooter = shooter;
-        // addRequirements(intake, indexer,shooter);
         healthReqs = new HashMap<MustangSubsystemBase, HealthState>();
         healthReqs.put(intake, HealthState.GREEN);
         healthReqs.put(indexer, HealthState.GREEN);

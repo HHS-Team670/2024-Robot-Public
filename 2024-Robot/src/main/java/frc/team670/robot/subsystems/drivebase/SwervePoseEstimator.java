@@ -15,22 +15,12 @@ public class SwervePoseEstimator extends SwervePoseEstimatorBase {
  
     @Override
     protected Pose2d getAbsoluteFieldOrientedPoseFromAllianceOriented(Pose2d pose) {
-        // if(FieldConstants.getAlliance() == Alliance.Red){
-        //         return FieldConstants.allianceOrientedAllianceFlip(pose);
-        //     } else {
-        //         return pose;
-        //     }
         return pose;
     }
 
     @Override
     protected List<Pose2d> getTargets() {
         List<Pose2d> targets = new ArrayList<>();
-
-        // for (Translation2d p : FieldConstants.Grids.complexLowTranslations)
-        //     targets.add(FieldConstants.allianceFlip(new Pose2d(p, new Rotation2d())));
-        // for (Pose2d p : FieldConstants.LoadingZone.IntakePoses)
-        //     targets.add(FieldConstants.allianceFlip(p));
         return targets;
     }
     

@@ -9,15 +9,13 @@ package frc.team670.robot;
 
 
 
-import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
+
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.DriverStation.Alliance;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team670.robot.commands.Intake.StartIntake;
 import frc.team670.robot.commands.auton.AlignAndShoot;
 import frc.team670.robot.commands.auton.AutonVisionAlign;
-import frc.team670.robot.commands.auton.SetAndShoot;
 import frc.team670.robot.commands.auton.SubwooferShot;
 import frc.team670.robot.commands.shooter.Shoot;
 import frc.team670.robot.commands.vision.AlignToNote;
@@ -30,7 +28,6 @@ import frc.team670.robot.constants.OI;
 import frc.team670.robot.subsystems.Indexer;
 import frc.team670.robot.subsystems.Intake;
 import frc.team670.robot.subsystems.LED;
-// import frc.team670.robot.subsystems.drivebase.DriveBase;
 import frc.team670.robot.subsystems.Shooter;
 import frc.team670.robot.subsystems.Vision;
 import frc.team670.robot.subsystems.Bars;

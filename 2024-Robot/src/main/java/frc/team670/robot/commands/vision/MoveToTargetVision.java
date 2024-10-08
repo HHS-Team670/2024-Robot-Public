@@ -28,9 +28,7 @@ import frc.team670.robot.subsystems.Shooter.Modes;
  */
 public class MoveToTargetVision extends Command implements MustangCommand {
     protected DriveBase driveBase;
-    // private final Pose2d endPose;
     private PhotonCamera[] cameras;
-    // private boolean backOut = false;
     protected Map<MustangSubsystemBase, HealthState> healthReqs;
     private MustangController mController;
     protected Shooter shooter;
@@ -66,12 +64,6 @@ public class MoveToTargetVision extends Command implements MustangCommand {
         shooterAngles.put(3.4511, 126.3); //shoot note 3 specific angle
         shooterAngles.put(3.7128, 125.5); //11 feet
         shooterAngles.put(4.036, 123.); //12 feet
-        // shooterAngles.put(4.7, 119.); //tested
-        // shooterAngles.put(4.932, 116.); //15 feet
-        // shooterAngles.put(5.4, 114.); //16 feet 
-
-        //shooterAngles.put(3.48, 130.);
-
         shooterAngles.put(4.689, 117.);
         shooterAngles.put(5.481, 116.5);
         shooterAngles.put(5.922, 116.);

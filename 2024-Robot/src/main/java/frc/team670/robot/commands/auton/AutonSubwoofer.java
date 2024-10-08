@@ -19,7 +19,6 @@ public class AutonSubwoofer extends Command implements MustangCommand{
         this.shooter = shooter;
         addRequirements(shooter);
         healthReqs = new HashMap<MustangSubsystemBase, HealthState>();
-        // healthReqs.put(shooter, HealthState.GREEN);
     }
 
     @Override

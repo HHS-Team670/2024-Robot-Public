@@ -30,7 +30,6 @@ import frc.team670.robot.commands.shooter.Shoot;
 import frc.team670.robot.commands.shooter.ShooterIntakeV2;
 import frc.team670.robot.commands.shooter.StopShooter;
 import frc.team670.robot.commands.shooter.Subwoofer;
-import frc.team670.robot.commands.shooter.Podium;
 import frc.team670.robot.commands.vision.AlignToAmp;
 import frc.team670.robot.commands.vision.AlignToNote;
 import frc.team670.robot.commands.vision.MoveToTargetVision;

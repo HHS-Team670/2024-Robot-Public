@@ -49,12 +49,6 @@ public class Climb extends InstantCommand implements MustangCommand{
                 elevator.moveToTarget(Elevator.ElevatorState.INDEXER_RETRIEVAL);
                 count = 0;
                 break;
-            // case 4:
-            //     elevator.moveToTarget(Elevator.ElevatorState.AMP);
-            //     break;
-            // case 5:
-            //     shooter.setShooterSpeed(Modes.TRAP);
-            //     break;
         }
 
         count++;

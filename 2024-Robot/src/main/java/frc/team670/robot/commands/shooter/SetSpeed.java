@@ -1,6 +1,5 @@
 package frc.team670.robot.commands.shooter;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -22,8 +21,6 @@ public class SetSpeed extends InstantCommand implements MustangCommand {
     public SetSpeed(Shooter shooter) {
         this.shooter = shooter;
         this.isSpeaker = true;
-        // healthReqs = new HashMap<MustangSubsystemBase, HealthState>();
-        // healthReqs.put(shooter, HealthState.GREEN);
     }
 
     @Override

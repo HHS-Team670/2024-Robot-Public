@@ -24,9 +24,7 @@ import frc.team670.robot.subsystems.drivebase.DriveBase;
  */
 public class AlignToAmp extends Command implements MustangCommand {
     protected DriveBase driveBase;
-    // private final Pose2d endPose;
     private PhotonCamera[] cameras;
-    // private boolean backOut = false;
     protected Map<MustangSubsystemBase, HealthState> healthReqs;
     private MustangController mController;
     private Shooter shooter;

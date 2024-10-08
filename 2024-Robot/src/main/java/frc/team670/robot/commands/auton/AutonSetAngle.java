@@ -23,14 +23,12 @@ public class AutonSetAngle extends Command implements MustangCommand {
     public AutonSetAngle(Shooter shooter, double angle) {
         this.shooter = shooter;
         this.angle = angle;
-        // addRequirements(shooter);
         healthReqs = new HashMap<MustangSubsystemBase, HealthState>();
         healthReqs.put(shooter, HealthState.GREEN);
     }
 
     @Override
     public void initialize() {
-        // double angle = SmartDashboard.getNumber("Shooter Target Angle", 0);
         boolean setAngle = shooter.setAngle(angle);
         Logger.recordOutput("Shooter /Set Angle", setAngle);
     }

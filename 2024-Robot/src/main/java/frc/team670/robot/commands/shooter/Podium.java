@@ -37,7 +37,7 @@ public class Podium extends InstantCommand implements MustangCommand {
     public void initialize() {
         angle = SwervePoseEstimatorBase.getAlliance() == Alliance.Red ? -8 : 8;
         shooter.setShooterSpeed(Modes.SPEAKER);
-        shooter.setAngle(114); // should be 123 from the math
+        shooter.setAngle(114); 
         driveBase.setmDesiredHeading(new Rotation2d(driveBase.getGyroscopeRotation().getRadians() + Math.toRadians(angle)));
         elevator.moveToTarget(ElevatorState.PODIUM);
     }

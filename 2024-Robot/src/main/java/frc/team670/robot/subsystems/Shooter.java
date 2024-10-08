@@ -17,7 +17,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team670.mustanglib.subsystems.MustangSubsystemBase;
 import frc.team670.mustanglib.subsystems.SparkMaxRotatingSubsystem;
 import frc.team670.mustanglib.subsystems.LEDSubsystem.LEDColor;
-//import frc.team670.mustanglib.utils.Logger;
 import frc.team670.mustanglib.utils.ConsoleLogger;
 import frc.team670.mustanglib.utils.functions.MathUtils;
 import frc.team670.mustanglib.utils.motorcontroller.MotorConfig.Motor_Type;
@@ -35,8 +34,6 @@ public class Shooter extends MustangSubsystemBase {
     private RelativeEncoder shooterEncoder, directionEncoder;
     private SparkPIDController shooterPIDController, directionPIDController;
 
-
-    //private final String SHOOTERCONTROLLER_CURRENT, FEEDERCONTROLLER_CURRENT, DIRECTIONCONTROLLER_CURRENT;
     
     protected Timer mTimer = new Timer();
 
@@ -51,9 +48,6 @@ public class Shooter extends MustangSubsystemBase {
     private HealthState health = HealthState.GREEN;
     private Notifier notifier;
 
-
-    //private double shooterTargetRPM;
-    //private double directionTargetRPM;
     
 
     private final String SHOOTER_VELOCITY_KEY = this.getName() + "/Shooter Velocity (RPM)";
@@ -111,14 +105,8 @@ public class Shooter extends MustangSubsystemBase {
         directionPIDController.setFF(RobotConstants.Shooter.kFF, RobotConstants.Shooter.kVelocitySlot);
 
 
-        //SmartDashboard.putNumber("Shooter Target Speed", shooterTargetRPM);
-        //SmartDashboard.putNumber("Direction Target RPM", directionTargetRPM);
         SmartDashboard.putNumber("Shooter Target Angle", 0);
-        // SmartDashboard.putNumber("Feeder Output Current", feederController.getOutputCurrent());
-        // SmartDashboard.putBoolean("Target is Speaker?", targetMode == Modes.SPEAKER ? true : false);
 
-        // setAngle(135);
-        // setShooterSpeed(Modes.SPEAKER);
         Notifier.setHALThreadPriority(true, 45);
         notifier = new Notifier(this::shooterPeriodicCheck);
         notifier.startPeriodic(0.005);
@@ -127,7 +115,6 @@ public class Shooter extends MustangSubsystemBase {
     public static synchronized Shooter getInstance() {
         mInstance = mInstance == null ? new Shooter() : mInstance;
         return mInstance; 
-        // return null;
 
     }
 
@@ -145,16 +132,12 @@ public class Shooter extends MustangSubsystemBase {
     
     //Uses smart dashboard to set values
     public void setShooterSpeed(Modes mode) {
-        //this.shooterTargetRPM = rpm;
         
-        // shooterController.set(ControlType.kVelocity, rpm);
         if (mode == Modes.SPEAKER) {
-            //this.directionTargetRPM = rpm;
             directionController.set(ControlType.kVelocity, RobotConstants.Shooter.MaxRPM);
             shooterController.set(ControlType.kVelocity, RobotConstants.Shooter.MaxRPM);
             this.targetMode = Modes.SPEAKER;
         } else if (mode == Modes.AMP) {
-            //this.directionTargetRPM = -1*rpm;
             directionController.set(ControlType.kVelocity,0.5* RobotConstants.Shooter.MaxRPM);
             shooterController.set(ControlType.kVelocity, 0.5*RobotConstants.Shooter.MaxRPM);
             
@@ -250,7 +233,6 @@ public class Shooter extends MustangSubsystemBase {
             health = HealthState.GREEN;
         }
         return HealthState.GREEN;
-        // return tilter.checkHealth();
     }
 
     public boolean hasNote(){
@@ -454,9 +436,6 @@ public class Shooter extends MustangSubsystemBase {
 
     @Override
     public void mustangPeriodic() {
-       // if(hasNote()){
-        //     led.setLedMode(LED.Mode.HASNOTE);
-        // }
         //if the beambreak in the shooter is no longer triggered turn off the shooter feeder motor? should be clear 
         if(!DriverStation.isAutonomousEnabled() && !beamBreak.isTriggered() && isShooting && mTimer.hasElapsed(time)){
             stopFeeder();

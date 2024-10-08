@@ -100,9 +100,7 @@ public final class RobotConstants extends RobotConstantsBase {
                             entry("kDriveMotorType",1.0))))
             .get(kRobotAddress);
 
-//        //Reme
         public static final class DriveBase extends SwerveDriveBase {
-                // Remember
 
                 public static final double kWidth = Units.inchesToMeters(36);
                 public static double kClearance = Math.hypot(kWidth, kWidth) / 2 + 0.05;
@@ -152,8 +150,6 @@ public final class RobotConstants extends RobotConstantsBase {
                 public static final AbsoluteEncoderType kBackLeftModuleEncoderType = AbsoluteEncoderType.HELIUM_CANCODER;
 
                 public static final AbsoluteEncoderType kBackRightModuleEncoderType = AbsoluteEncoderType.HELIUM_CANCODER;
-
-                // public static final double kMaxVelocityMetersPerSecond = 0.5;
                 
                 public static final double kMaxVelocityMetersPerSecond = 3000.0 / 60.0
                                 * kModuleConfig.getDriveReduction() * kModuleConfig.getWheelDiameter() * Math.PI;
@@ -192,15 +188,15 @@ public final class RobotConstants extends RobotConstantsBase {
 
         public class Deployer{
 
-                public static final int kContinuousCurrent = 10;//Value taken from 2023 robot
-                public static final int kPeakCurrent = 32;//Value taken from 2023 robot
+                public static final int kContinuousCurrent = 10;
+                public static final int kPeakCurrent = 32;
                 public static final MotorConfig.Motor_Type kMotorType = MotorConfig.Motor_Type.NEO;
                 public static final int kMotorID = 12; 
                 public static final Config kConfig = new Config(kMotorID, kMotorType, kContinuousCurrent, kPeakCurrent);
-                public static final double kTimeDown = 0.39; //Value will need to be changed
-                public static final double kUpMotorSpeed = 0.5; //Value will need to be changed
+                public static final double kTimeDown = 0.39; 
+                public static final double kUpMotorSpeed = 0.5; 
                 public static final double kDownMotorSpeed=0.4;
-                public static final double kTimeUp = 0.35; //Value will need to be changed
+                public static final double kTimeUp = 0.35; 
         }
 
     }
@@ -242,7 +238,7 @@ public final class RobotConstants extends RobotConstantsBase {
                 public static final int kBeamBreakID = 9;
 
                 public static final int kFeederMotorID = 58;
-                public static final int kDirectionMotorID = 62; // CHANGE ALL CONSTANTS, WE DON'T HAVE A ROBOT
+                public static final int kDirectionMotorID = 62; 
 
                 public static final double kAmpSpeed = 3480 / 3;
                 public static final double kAllowedSpeedError = 100;
@@ -347,7 +343,6 @@ public final class RobotConstants extends RobotConstantsBase {
             public static final double MIN_ROTATOR_RPM = 0;
             public static final double MAX_ROTATOR_RPM = 4500; 
             public static final int SLOT = 0;
-           // public static final double ALLOWED_DEVIATION = 0.0;
             public static final int PEAK_CURRENT = 60;
     
             // lower soft limit and upper soft limit were flipped because the motors were inverted
@@ -355,9 +350,7 @@ public final class RobotConstants extends RobotConstantsBase {
             public static final float LOWER_SOFT_LIMIT = (float) ((((MAX_EXTENSION-0.01 )/ CIRCUMFERENCE_SPROCKET) * GEAR_RATIO)); // IN MOTOR ROTATIONS, 7 CM FROM TOP, 23.32 rotations
             public static final float[] SOFT_LIMITS= {UPPER_SOFT_LIMIT, LOWER_SOFT_LIMIT};
             public static final double MAX_HEIGHT = MAX_EXTENSION - 0.01;
-    
-            //private double kForward = 0;
-            //private double kReverse = 0;
-            public static final double MAX_ACCELERATION = MAX_ROTATOR_RPM*2; // TODO CHANGE THIS
+
+            public static final double MAX_ACCELERATION = MAX_ROTATOR_RPM*2; 
     }
 }

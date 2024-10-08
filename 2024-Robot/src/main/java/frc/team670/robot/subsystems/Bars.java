@@ -26,7 +26,6 @@ public class Bars extends MustangSubsystemBase{
     public static synchronized Bars getInstance() {
         mInstance = mInstance == null ? new Bars() : mInstance;
         return mInstance;
-        // return null;
     }
 
     public Bars() {
