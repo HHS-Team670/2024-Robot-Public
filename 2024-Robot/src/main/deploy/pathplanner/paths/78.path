@@ -1,0 +1,109 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.26,
+        "y": 1.69
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.266041808880493,
+        "y": 1.64285005657685
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.921519924781747,
+        "y": 0.8518744700973204
+      },
+      "prevControl": {
+        "x": 7.914912384641702,
+        "y": 0.845695072638361
+      },
+      "nextControl": {
+        "x": 7.933441338670867,
+        "y": 0.8630234231316273
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.25,
+        "y": 1.69
+      },
+      "prevControl": {
+        "x": 4.252699581854603,
+        "y": 1.6854012831361906
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.55,
+      "rotationDegrees": 164.98669254024702,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "Intake",
+      "waypointRelativePos": 1.45,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "RunIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Shoot",
+      "waypointRelativePos": 2.0,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootNote"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 3.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 146.70006755060993,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "PathsForAutos",
+  "previewStartingState": {
+    "rotation": 148.09,
+    "velocity": 0
+  },
+  "useDefaultConstraints": false
+}

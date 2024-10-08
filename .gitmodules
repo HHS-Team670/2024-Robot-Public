@@ -1,0 +1,6 @@
+[submodule "2024-Robot/src/main/java/frc/team670/MustangLib"]
+	path = 2024-Robot/src/main/java/frc/team670/MustangLib
+	url = https://github.com/HHS-Team670/MustangLib
+[submodule "2024-Robot/src/main/java/frc/team670/--force"]
+	path = 2024-Robot/src/main/java/frc/team670/mustanglib
+	url = https://github.com/HHS-Team670/MustangLib

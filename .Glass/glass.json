@@ -1,0 +1,71 @@
+{
+  "NetworkTables": {
+    "transitory": {
+      "AdvantageKit": {
+        "RealOutputs": {
+          "Tilter": {
+            "open": true
+          }
+        },
+        "open": true
+      },
+      "SmartDashboard": {
+        "open": true
+      }
+    },
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/Field": "Field2d"
+    }
+  },
+  "NetworkTables Info": {
+    "Clients": {
+      "open": true
+    },
+    "Connections": {
+      "open": true
+    },
+    "NT3@127.0.0.1:55646": {
+      "Publishers": {
+        "open": true
+      },
+      "open": true
+    },
+    "NT3@127.0.0.1:55945": {
+      "Publishers": {
+        "open": true
+      },
+      "Subscribers": {
+        "open": true
+      },
+      "open": true
+    },
+    "NT3@127.0.0.1:65003": {
+      "Publishers": {
+        "open": false
+      },
+      "Subscribers": {
+        "open": false
+      },
+      "open": false
+    },
+    "NT3@127.0.0.1:65185": {
+      "Subscribers": {
+        "open": true
+      },
+      "open": true
+    },
+    "Server": {
+      "Subscribers": {
+        "open": true
+      },
+      "open": true
+    },
+    "visible": true
+  },
+  "NetworkTables Settings": {
+    "listenAddress": "127.0.0.1",
+    "mode": "Client (NT4)",
+    "serverTeam": "10.6.70.2"
+  }
+}

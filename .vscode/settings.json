@@ -1,0 +1,43 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "java.test.config": [
+        {
+            "name": "Test with AppMap",
+            "vmArgs": [
+                "-javaagent:${userHome}\\.appmap\\lib\\java\\appmap.jar",
+                "-Dappmap.output.directory=${command:appmap.getAppmapDir}"
+            ]
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "terminal.integrated.profiles.osx": {
+
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    }
+}
